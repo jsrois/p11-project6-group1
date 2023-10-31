@@ -20,30 +20,6 @@ function AlbumCatalog() {
     }, 
     []
   );
-  
-
-
-
-  /*let[products,setProducts] =useState([]);
-
-  useEffect(
-      () => {
-          const options = {
-              method:'GET',
-              headers: {
-                accept: 'application/json',
-                Authorization: 'Bearer '
-              }
-          };
-  
-          fetch('http://localhost:3000/products')
-              .then(response => response.json())
-              .then(data => setProducts(data))
-              .catch(err => console.error(err));
-      },
-      []
-  ); */
-
 
   return (
     <div>
