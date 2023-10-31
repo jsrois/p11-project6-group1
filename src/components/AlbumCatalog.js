@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function AlbumCatalog() {
-  const [albums, setAlbums] = useState([]);
+  let [albums, setAlbums] = useState([]);
 
   useEffect(() =>
     () => {
@@ -9,13 +9,13 @@ function AlbumCatalog() {
           method:'GET',
           headers: {
             accept: 'application/json',
-            Authorization: 'Bearer 2d46dcd776204d95a0abb0ef203a497a'
+            Authorization: 'Bearer da3cea8f10f74e99a6d514abe260dfb3'
           }
       };
 
-    fetch('https://api.spotify.com/v1/me/albums', options)  
+    fetch('https://api.spotify.com/v1/albums?ids=382ObEPsp2rxGrnsizN5TX%2C1A2GTWGtFfWp7KSQTwWOyo%2C2noRn2Aes5aoNVsU6iWThc&market=Us', options)  
       .then(response => response.json())
-      .then(data => setAlbums(data.items))
+      .then(data => console.log(data))
       .catch(err => console.error(err));
     }, 
     []
@@ -23,13 +23,16 @@ function AlbumCatalog() {
 
   return (
     <div>
-      {albums.map(album => (
-        <div key={album.id}>
-          <img src={album.images[0].url} alt={album.name} />
-          <h2>{album.name}</h2>
-          <p>{album.artists.map(artist => artist.name).join(', ')}</p>
-        </div>
-      ))}
+      {/* {
+        albums.map(album => 
+          <div>
+            <div>
+            <img src={albums.images} className="image" alt="" />
+            </div>
+          </div>  
+          )
+      } */}
+      
     </div>
   );
 }
