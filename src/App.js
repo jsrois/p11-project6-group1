@@ -1,15 +1,14 @@
+import { useEffect, useState } from 'react';
 import './App.css';
-import './components/StartButton';
 import StartButton from './components/StartButton';
-import frontpage from'./components/frontpage';
-import getProfile from './components/getProfile';
+import AlbumCatalog from './components/AlbumCatalog';
+import Logo_Complete from './img/Logo_Complete.png';
 
 function App() {
   return (
     <div className="App">
       <StartButton />
-      <GetProfile />
-      
+      <AlbumCatalog />
     </div>
   );
 }

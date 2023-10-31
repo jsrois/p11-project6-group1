@@ -1,4 +1,11 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MYRIADPRO-REGULAR.OTF') ('truetype');
+}
+
 .start-button{
     background-color: #F4D06F;
-    
+    font-family: 'Myriad Pro';
+    border-radius: 5px;
+
 }
