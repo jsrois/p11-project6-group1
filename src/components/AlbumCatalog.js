@@ -8,12 +8,12 @@ function AlbumCatalog() {
       const options = {
           method:'GET',
           headers: {
-            accept: 'application/json',
-            Authorization: 'Bearer 2d46dcd776204d95a0abb0ef203a497a'
+            'Content-Type': 'application/json',
+            'authorization': 'Bearer 382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc'
           }
       };
 
-    fetch('https://api.spotify.com/v1/me/albums', options)  
+    fetch('https://api.spotify.com/v1/albums', options)
       .then(response => response.json())
       .then(data => setAlbums(data.items))
       .catch(err => console.error(err));
