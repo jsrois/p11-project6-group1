@@ -1,41 +1,44 @@
 import { useEffect, useState } from "react";
 
 function AlbumCatalog() {
-  let [albums, setAlbums] = useState([]);
+  const [albums, setAlbums] = useState([]);
 
-  useEffect(() =>
-    () => {
-      const options = {
-          method:'GET',
-          headers: {
-            accept: 'application/json',
-            Authorization: 'Bearer da3cea8f10f74e99a6d514abe260dfb3'
-          }
-      };
+  let updateAlbums = () => {
+    const url = 'https://deezerdevs-deezer.p.rapidapi.com/track/%7Bid%7D';
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '73d5fecda6msh432388239edf267p150ce4jsna48078fcb213',
+        'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com',
+      }
+    };
 
-    fetch('https://api.spotify.com/v1/me/albums', options)  
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(err => console.error(err));
-    }, 
-    []
-  );
+    fetch(url, options)
+    .then(response => response.json())
+    .then(result => setAlbums(result.albums))
+    .catch(err => console.error(err))
+  }
+
+  useEffect(updateAlbums, []);
+  console.log(albums)
 
   return (
     <div>
-      {/* {
-        albums.map(album => 
+      {albums.items.data.map(album => ( 
+        <div key={album.id}>
+          {/* <div>
+            {album.images.map((image, index) => (
+              <img key={index} src={image.url} className="image" alt={album.name} />
+            ))}
+          </div> */}
           <div>
-            <div>
-            <img src={albums.images} className="image" alt="" />
-            </div>
-          </div>  
-          )
-      } */}
-      
+            <p>{album.name}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
-}
 
+}
 
 export default AlbumCatalog;
