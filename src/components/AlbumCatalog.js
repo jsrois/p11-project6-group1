@@ -8,8 +8,8 @@ function AlbumCatalog() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '73d5fecda6msh432388239edf267p150ce4jsna48078fcb213',
-        'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com',
+        'X-RapidAPI-Key': '',
+        'X-RapidAPI-Host': '',
       }
     };
 
