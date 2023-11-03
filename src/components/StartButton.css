@@ -4,8 +4,10 @@
 }
 
 .start-button{
-    background-color: #F4D06F;
+    width: 561px;
+    height: 80px;
+    color: #F4D06F;
     font-family: 'Myriad Pro';
-    border-radius: 5px;
+    border-radius: 10px;
 
 }
