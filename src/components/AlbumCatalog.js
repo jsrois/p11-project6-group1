@@ -4,18 +4,21 @@ function AlbumCatalog() {
   const [albums, setAlbums] = useState([]);
 
   let updateAlbums = () => {
-    const url = 'https://deezerdevs-deezer.p.rapidapi.com/track/%7Bid%7D';
+    const url = 'https://api.deezer.com/chart/0/albums';
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '',
-        'X-RapidAPI-Host': '',
+        "Content-Type": "application/json",
+        // "Authorization": "Bearer 37022a40bdd23bd52dc4f30f2f739606"
       }
     };
 
     fetch(url, options)
     .then(response => response.json())
-    .then(result => setAlbums(result.albums))
+    .then(result => {
+      setAlbums(result.data);
+      console.log(result)
+    })
     .catch(err => console.error(err))
   }
 
@@ -24,15 +27,11 @@ function AlbumCatalog() {
 
   return (
     <div>
-      {albums.items.data.map(album => ( 
-        <div key={album.id}>
-          {/* <div>
-            {album.images.map((image, index) => (
-              <img key={index} src={image.url} className="image" alt={album.name} />
-            ))}
-          </div> */}
+      {albums.slice(0, 15).map((albumData, index) => ( 
+        <div key={albumData.id}>
+              <img key={index} src={albumData.cover} className="image" alt={albumData.title} />
           <div>
-            <p>{album.name}</p>
+            <p>{albumData.title}</p>
           </div>
         </div>
       ))}

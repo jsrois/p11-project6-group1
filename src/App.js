@@ -5,6 +5,7 @@ import AlbumCatalog from './components/AlbumCatalog';
 import Logo_Complete from './img/Logo_Complete.png';
 
 function App() {
+  
   return (
     <div className="App">
       <StartButton />
