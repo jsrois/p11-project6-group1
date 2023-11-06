@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+body {
+    background-color:#151515;
+    min-height: 100vh;
+}
+
+.cards{
+  width: 100px;
+  height: 200px;
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './GetAlbumCatalog.css';
 
 function GetAlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
@@ -70,9 +71,12 @@ function GetAlbumCatalog() {
   }, [downloadAlbums]);
 
   return (
-    <div class="cards">
+    <div className="cards">
       {albums.map((album) => (
-        <img src={album.images[0].url} className="" alt="image" />
+          <div key={album.id} className="cardsContent">
+            <img src={album.images[0].url} alt="image" />
+            <h2 className="albumTitle">{album.name}</h2>
+          </div>
       ))}
     </div>
   );

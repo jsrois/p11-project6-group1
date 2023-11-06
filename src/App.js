@@ -1,17 +1,16 @@
 import './App.css';
 import StartButton from './components/StartButton';
-import Logo from './components/Logo';
+import FrontPage from '';
 import GetAlbumCatalog from './components/GetAlbumCatalog';
-// import TemporalMain from './components/TemporalMain';
+
 
 function App() {
   
   return (
     <div className="App">
-      <Logo />
+      <Fro />
       <StartButton />
       <GetAlbumCatalog />
-      {/* <TemporalMain /> */}
     </div>
   );
 }
