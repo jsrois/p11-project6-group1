@@ -27,7 +27,7 @@ function Fetch () {
                 if(request.ok){
                     setAccessToken(response.access_token);
                     localStorage.setItem('access_token', response.access_token);
-                    console.log(response); 
+                    /* console.log(response); to check API results? */
                 }
             } catch(error){
                 console.log(error);
@@ -41,41 +41,35 @@ function Fetch () {
     );
 
     // Search Function
-    function AlbumCatalog() {
-        const [albums, setAlbums] = useState([]);
-        
-        const URL='https://api.spotify.com/v1/albums/4aawyAB9vmqN3uQ7FjRGTy/tracks';
 
+    const [albums, setAlbums] = useState([]);
+    
+    const URL='https://api.spotify.com/v1/albums/4aawyAB9vmqN3uQ7FjRGTy/tracks';
 
-        let updateAlbums = function() {
-          const options = {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bearer ' + accessToken,
-            }
-          };
-      
-        fetch(URL, options)
-            .then(response => response.json())
-            .then(result => {
-            setAlbums(result.albums);
-            console.log(result)
-            })
-            .catch(err => console.error(err))
+        const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + accessToken,
         }
-        
-        return(
-            <div>{
-                albums.map(album =>
-                <img src={album.images} className="" alt="image" />
-                )}
-            </div>
-        )
+        };
+    
+    fetch(URL, options)
+        .then(response => response.json())
+        .then(result => {
+        setAlbums(albums);
+        console.log(result)
+        })
+        .catch(err => console.error(err))
+    
+    return(
+        <div>{
+            albums.map(album =>
+            <img src={album.images} className="" alt="image" />
+            )}
+        </div>
+    )
 
-
-    }
-    AlbumCatalog();
 }
 
 export default Fetch;
