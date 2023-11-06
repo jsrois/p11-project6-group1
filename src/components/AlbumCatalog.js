@@ -9,7 +9,7 @@ function AlbumCatalog() {
       method: 'GET',
       headers: {
         "Content-Type": "application/json",
-        // "Authorization": "Bearer  "
+        // "Authorization": "Bearer 37022a40bdd23bd52dc4f30f2f739606"
       }
     };
 
