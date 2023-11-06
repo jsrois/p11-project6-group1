@@ -48,7 +48,7 @@ function GetAlbumCatalog() {
   const [downloadAlbums, setDownloadAlbums] = useState(false);
 
   const URL =
-    "https://api.spotify.com/v1/browse/new-releases?country=ES&limit=15";
+    "https://api.spotify.com/v1/browse/new-releases?country=ES&limit=16";
 
   const options = {
     method: "GET",
@@ -76,6 +76,7 @@ function GetAlbumCatalog() {
           <div key={album.id} className="cardsContent">
             <img src={album.images[0].url} alt="image" />
             <h2 className="albumTitle">{album.name}</h2>
+            <h3 className="artistName">{artist.name}</h3>
           </div>
       ))}
     </div>

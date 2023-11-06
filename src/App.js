@@ -1,6 +1,5 @@
 import './App.css';
-import StartButton from './components/StartButton';
-import FrontPage from '';
+import FrontPage from './components/FrontPage';
 import GetAlbumCatalog from './components/GetAlbumCatalog';
 
 
@@ -8,8 +7,7 @@ function App() {
   
   return (
     <div className="App">
-      <Fro />
-      <StartButton />
+      <FrontPage />
       <GetAlbumCatalog />
     </div>
   );
