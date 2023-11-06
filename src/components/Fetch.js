@@ -8,8 +8,8 @@ function Fetch () {
 
     useEffect(() => {
         async function getToken(){
-            const CLIENT_ID = '';
-            const CLIENT_SECRET = '';
+            const CLIENT_ID = '9a68f87255b544308a6fbebbd710b53f';
+            const CLIENT_SECRET = 'da3cea8f10f74e99a6d514abe260dfb3';
             const URL = 'https://accounts.spotify.com/api/token';
 
             const options={
@@ -27,6 +27,7 @@ function Fetch () {
                 if(request.ok){
                     setAccessToken(response.access_token);
                     localStorage.setItem('access_token', response.access_token);
+                    console.log(response); 
                 }
             } catch(error){
                 console.log(error);
@@ -67,7 +68,7 @@ function Fetch () {
         return(
             <div>{
                 albums.map(album =>
-                <img src={album.images} className="" alt="" />
+                <img src={album.images} className="" alt="image" />
                 )}
             </div>
         )

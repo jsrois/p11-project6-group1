@@ -1,15 +1,17 @@
-import { useEffect, useState } from 'react';
 import './App.css';
 import StartButton from './components/StartButton';
-import Logo_Complete from './img/Logo_Complete.png';
+import Logo from './components/Logo';
 import Fetch from './components/Fetch';
+// import TemporalMain from './components/TemporalMain';
 
 function App() {
   
   return (
     <div className="App">
+      <Logo />
       <StartButton />
       <Fetch />
+      {/* <TemporalMain /> */}
     </div>
   );
 }

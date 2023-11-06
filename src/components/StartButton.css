@@ -4,10 +4,19 @@
 }
 
 .start-button{
-    width: 561px;
-    height: 80px;
-    color: #F4D06F;
-    font-family: 'Myriad Pro';
+    display: flex;
+    justify-content: center;
+    align-content: center;
     border-radius: 10px;
+}
 
+.defaultButton {
+    background-color: #F4D06F;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
 }
