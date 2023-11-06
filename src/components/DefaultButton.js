@@ -1,5 +1,5 @@
 function DefaultButton({buttonText}) {
-    return <button>{buttonText}</button>
+    return <button className="defaultButton">{buttonText}</button>
 }
 
 export default DefaultButton;
