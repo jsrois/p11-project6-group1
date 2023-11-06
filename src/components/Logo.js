@@ -1,4 +1,4 @@
-import LogoImage from '../img/Logo_Complete.png';
+import LogoImage from '../img/Imagotipo2.png';
 import '../components/Logo.css';
 
 function Logo() {

@@ -1,10 +1,10 @@
 import React from "react";
-import Logo_Complete from "../img/Logo_Complete.png";
+import Imagotipo2 from "../img/Imagotipo2.png";
 
 export const frontpage = () => {
   return (
     <div>
-      <img class="Logo_Complete" src={Logo_Complete} />
+      <img class="Imagotipo2" src={Imagotipo2} />
     </div>
   );
 };

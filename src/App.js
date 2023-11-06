@@ -1,7 +1,7 @@
 import './App.css';
 import StartButton from './components/StartButton';
 import Logo from './components/Logo';
-import Fetch from './components/Fetch';
+import GetAlbumCatalog from './components/GetAlbumCatalog';
 // import TemporalMain from './components/TemporalMain';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Logo />
       <StartButton />
-      <Fetch />
+      <GetAlbumCatalog />
       {/* <TemporalMain /> */}
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function Fetch() {
+function GetAlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
 
   const localStorage = window.localStorage;
@@ -70,7 +70,7 @@ function Fetch() {
   }, [downloadAlbums]);
 
   return (
-    <div>
+    <div class="cards">
       {albums.map((album) => (
         <img src={album.images[0].url} className="" alt="image" />
       ))}
@@ -78,4 +78,4 @@ function Fetch() {
   );
 }
 
-export default Fetch;
+export default GetAlbumCatalog;
