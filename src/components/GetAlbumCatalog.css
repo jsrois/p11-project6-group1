@@ -1,24 +1,50 @@
-.cards {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 4rem;
-    padding: 4rem;
+@font-face {
+  font-family: "Myriad";
+  src: URL("../fonts/MYRIADPRO-REGULAR.OTF");
+}
 
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10rem;
+  padding: 4rem;
 }
+
 .cardsContent {
-    width: calc((100% - 12rem) / 4);
-    
+  width: calc((100% - 30rem) / 4);
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.cardsContent img {
-    width: 100%;
-    border-radius: 1rem;
+
+.albumImage {
+  width: 70%;
+  border-radius: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.albumTitle {
+  font-family: "Myriad";
+  font-size: 20px;
+  color: #92dce5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
-    .cardsContent {
-        width: 100%;
-        
-    }
+  .cardsContent {
+    width: 100%;
+  }
 }

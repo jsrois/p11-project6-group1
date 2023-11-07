@@ -49,7 +49,7 @@ function GetAlbumCatalog() {
   const [downloadAlbums, setDownloadAlbums] = useState(false);
 
   const URL =
-    "https://api.spotify.com/v1/browse/new-releases?country=ES&limit=16";
+    "https://api.spotify.com/v1/browse/new-releases?country=ES&limit=32";
 
   const options = {
     method: "GET",
@@ -77,9 +77,9 @@ function GetAlbumCatalog() {
       <div className="cards">
         {albums.map((album) => (
           <div key={album.id} className="cardsContent">
-            <img src={album.images[0].url} alt="image" />
+            <img className="albumImage" src={album.images[0].url} alt="image" />
             <h2 className="albumTitle">{album.name}</h2>
-            {/* <h3 className="artistName">{artist.name}</h3> */}
+            <h3 className="artistName">{album.artists.name}</h3>
           </div>
         ))}
       </div>
