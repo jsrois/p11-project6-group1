@@ -6,7 +6,7 @@ export const Frontpage = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <img class="completeLogo" src={completeLogo} />
+      <img class="logoFrontPage" src={completeLogo} />
       <h1>Frontify</h1>
       <button className="startButton" onClick={() => navigate("albums")}>
         Empezar

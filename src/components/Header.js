@@ -4,7 +4,7 @@ import "./Header.css";
 function Header() {
   return (
     <div>
-      <img class="completeLogo" src={completeLogo} />
+      <img class="logoAlbumPage" src={completeLogo} />
     </div>
   );
 }
