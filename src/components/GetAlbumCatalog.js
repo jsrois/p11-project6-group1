@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import './GetAlbumCatalog.css';
+import "./GetAlbumCatalog.css";
+import Header from "./Header";
 
 function GetAlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
@@ -71,14 +72,17 @@ function GetAlbumCatalog() {
   }, [downloadAlbums]);
 
   return (
-    <div className="cards">
-      {albums.map((album) => (
+    <div>
+      <Header />
+      <div className="cards">
+        {albums.map((album) => (
           <div key={album.id} className="cardsContent">
             <img src={album.images[0].url} alt="image" />
             <h2 className="albumTitle">{album.name}</h2>
             {/* <h3 className="artistName">{artist.name}</h3> */}
           </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
