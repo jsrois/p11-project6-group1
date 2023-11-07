@@ -1,14 +1,16 @@
-import Imagotipo2 from "../img/Imagotipo2.png";
-import { useNavigate } from "react-router-dom"; 
-import './FrontPage.css'
+import completeLogo from "../img/completeLogo.png";
+import { useNavigate } from "react-router-dom";
+import "./FrontPage.css";
 
 export const Frontpage = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div>
-      <img class="Imagotipo2" src={Imagotipo2} />
+      <img class="completeLogo" src={completeLogo} />
       <h1>Frontify</h1>
-      <button onClick={ () => navigate('albums')}>Empezr</button>
+      <button className="startButton" onClick={() => navigate("albums")}>
+        Empezar
+      </button>
     </div>
   );
 };
