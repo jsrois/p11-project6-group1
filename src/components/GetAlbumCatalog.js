@@ -76,7 +76,7 @@ function GetAlbumCatalog() {
           <div key={album.id} className="cardsContent">
             <img src={album.images[0].url} alt="image" />
             <h2 className="albumTitle">{album.name}</h2>
-            <h3 className="artistName">{artist.name}</h3>
+            {/* <h3 className="artistName">{artist.name}</h3> */}
           </div>
       ))}
     </div>
