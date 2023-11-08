@@ -7,24 +7,49 @@ h1{
     display: none;
 }
 
-.logoFrontPage {
+.frontPage{
+    height: 100%;
+}
+
+.logoFrontPagePc {
     display: block;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 5rem auto;
+    height: 25rem;
+}
+
+.logoFrontPagePhone{
+    display: none;
 }
 
 .startButton {
     display: block;
-    margin: 0 auto;
-    margin-top: 70px;
+    margin: 5.5rem auto;
     background-color: #92DCE5;
     font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: 18px;
-    justify-content: center;
-    align-content: center;
     width: 200px;
     height: 40px;
     border-radius: 20px;
     border: none;
 }
+
+@media (max-width: 600px) {
+    
+    .logoFrontPagePhone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40% auto;
+    }
+  
+    .logoFrontPagePc{
+        display: none;
+    }
+
+  }
+  
+  @media ((max-width: 1024px) and (min-width: 601px)) {
+   
+  }
+  
