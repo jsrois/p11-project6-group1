@@ -72,14 +72,20 @@ function GetAlbumCatalog() {
   }, [downloadAlbums]);
 
   return (
-    <div>
+    <div classname="overallPage">
       <Header />
       <div className="cards">
         {albums.map((album) => (
           <div key={album.id} className="cardsContent">
             <img className="albumImage" src={album.images[0].url} alt="image" />
             <h2 className="albumTitle">{album.name}</h2>
-            <h3 className="artistName">{album.artists.name}</h3>
+            <div className="artistNames">
+              {album.artists.map((artist) => (
+                <h3 key={artist.id} className="artistName">
+                  {artist.name}
+                </h3>
+              ))}
+            </div>
           </div>
         ))}
       </div>
