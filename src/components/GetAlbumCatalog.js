@@ -9,9 +9,10 @@ function GetAlbumCatalog() {
 
   useEffect(() => {
     async function getToken() {
-      const CLIENT_ID = "9a68f87255b544308a6fbebbd710b53f";
-      const CLIENT_SECRET = "da3cea8f10f74e99a6d514abe260dfb3";
+      const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+      const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
       const URL = "https://accounts.spotify.com/api/token";
+      
 
       let body = new URLSearchParams();
       body.append("grant_type", "client_credentials");
