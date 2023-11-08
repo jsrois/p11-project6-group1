@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./GetAlbumCatalog.css";
 import Header from "./Header";
+import Input from "./Input";
 
 function GetAlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
@@ -12,7 +13,6 @@ function GetAlbumCatalog() {
       const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
       const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
       const URL = "https://accounts.spotify.com/api/token";
-      
 
       let body = new URLSearchParams();
       body.append("grant_type", "client_credentials");
@@ -50,7 +50,7 @@ function GetAlbumCatalog() {
   const [downloadAlbums, setDownloadAlbums] = useState(false);
 
   const URL =
-    "https://api.spotify.com/v1/browse/new-releases?country=ES&limit=32";
+    "https://api.spotify.com/v1/browse/new-releases?country=ES&limit=30";
 
   const options = {
     method: "GET",
@@ -74,6 +74,7 @@ function GetAlbumCatalog() {
 
   return (
     <div classname="overallPage">
+      <Input />
       <Header />
       <div className="cards">
         {albums.map((album) => (

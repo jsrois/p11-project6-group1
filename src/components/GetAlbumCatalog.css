@@ -58,20 +58,20 @@
     height: 19rem;
   }
 
-  .cards{
-    width: 32rem;
-    
+  .cards {
+    width: 100%;
+    padding: 0;
   }
 }
 
-@media (max-width: 1024px) {
-  .cardsContent{
+@media ((max-width: 1024px) and (min-width: 601px)) {
+  .cardsContent {
     width: 100%;
     height: 5rem;
     margin: 0 0;
-    }
+  }
 
-  .cards{
+  .cards {
     width: 30rem;
     display: flex;
   }
