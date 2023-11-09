@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./AlbumCatalog.css";
 import Header from "./Header";
-import Input from "./Input";
 
 function AlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
@@ -74,7 +73,6 @@ function AlbumCatalog() {
 
   return (
     <div classname="overallPage">
-      <Input />
       <Header />
       <div className="cards">
         {albums.map((album) => (

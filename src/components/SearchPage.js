@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SearchPage.css";
 import Header from "./Header";
-import Input from "./Input";
 
 function SearchResult() {
   const [accessToken, setAccessToken] = useState(null);
@@ -73,7 +72,6 @@ function SearchResult() {
 
   return (
     <div classname="overallPage">
-      <Input />
       <Header />
       <div className="cards">
         {albums.map((album) => (
