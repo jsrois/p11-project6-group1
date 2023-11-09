@@ -1,9 +1,10 @@
 import './App.css';
 import FrontPage from "./components/FrontPage";
-import AlbumCatalog from './components/GetAlbumCatalog';
+import AlbumCatalog from './components/AlbumCatalog';
 import { Route, Routes } from 'react-router-dom';
 import  {SearchBar}  from './components/SearchBar';
 import {useState} from "react";
+import SearchPage from './components/SearchPage';
 
 
 function App() {
