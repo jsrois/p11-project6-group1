@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./GetAlbumCatalog.css";
+import "./SearchPage.css";
 import Header from "./Header";
 import Input from "./Input";
 
-function GetAlbumCatalog() {
+function SearchResult() {
   const [accessToken, setAccessToken] = useState(null);
 
   const localStorage = window.localStorage;
@@ -49,8 +49,7 @@ function GetAlbumCatalog() {
   const [albums, setAlbums] = useState([]);
   const [downloadAlbums, setDownloadAlbums] = useState(false);
 
-  const URL =
-    "https://api.spotify.com/v1/browse/new-releases?country=ES&limit=30";
+  const URL = "https://api.spotify.com/v1/search";
 
   const options = {
     method: "GET",
@@ -95,4 +94,4 @@ function GetAlbumCatalog() {
   );
 }
 
-export default GetAlbumCatalog;
+export default SearchResult;
