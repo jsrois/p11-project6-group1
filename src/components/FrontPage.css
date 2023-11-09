@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Myriad Pro';
-    src: url('../fonts/MYRIADPRO-REGULAR.OTF') ('truetype');
+    src: url('../assets/fonts/MYRIADPRO-REGULAR.OTF');
 }
 
 h1{
@@ -12,8 +12,11 @@ h1{
 }
 
 .logoFrontPagePc {
-    display: block;
-    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5%;
     height: 25rem;
 }
 
@@ -40,7 +43,8 @@ h1{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 40% auto;
+        margin: 0 auto;
+        margin-top: 40%
     }
   
     .logoFrontPagePc{
@@ -51,5 +55,15 @@ h1{
   
   @media ((max-width: 1024px) and (min-width: 601px)) {
    
+    .logoFrontPagePhone {
+        display: none;
+    }
+  
+    .logoFrontPagePc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 40%    }
   }
   

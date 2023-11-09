@@ -1,5 +1,5 @@
-import Isologo from "../assets/img/Isologo.png";
-import Imagotipo from "../assets/img/Imagotipo.png"
+import Isologo from "../assets/img/Isologo.svg";
+import Imagotipo from "../assets/img/Imagotipo.svg"
 import { useNavigate } from "react-router-dom";
 import "./FrontPage.css";
 

@@ -1,4 +1,4 @@
-import completeLogo from "../assets/img/Isologo.png";
+import completeLogo from "../assets/img/Isologo.svg";
 import "./Header.css";
 
 function Header() {
