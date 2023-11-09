@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./GetAlbumCatalog.css";
+import "./AlbumCatalog.css";
 import Header from "./Header";
-import Input from "./Input";
 
-function GetAlbumCatalog() {
+function AlbumCatalog() {
   const [accessToken, setAccessToken] = useState(null);
 
   const localStorage = window.localStorage;
@@ -74,7 +73,6 @@ function GetAlbumCatalog() {
 
   return (
     <div classname="overallPage">
-      <Input />
       <Header />
       <div className="cards">
         {albums.map((album) => (
@@ -95,4 +93,4 @@ function GetAlbumCatalog() {
   );
 }
 
-export default GetAlbumCatalog;
+export default AlbumCatalog;
